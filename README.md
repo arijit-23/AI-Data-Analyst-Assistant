@@ -14,3 +14,36 @@ A data analyst can automate the full workflow
 AI can be used responsibly and safely
 A project can still work offline (demo mode)
 💡 Upload → Clean → Analyze → Visualize → Ask questions in plain English
+
+Architecture :
+User
+ │
+ ▼
+Streamlit UI (app.py)
+ │
+ ├── Data Cleaning Logic (utils.py)
+ ├── Insights & Charts (utils.py)
+ └── Chatbot (chatbot.py)
+        ├── Demo Mode (offline)
+        └── Live AI (optional)
+
+File Structure :
+app.py                  → Main Streamlit app (UI + flow control)
+utils.py                → Data cleaning & analysis functions
+chatbot.py              → AI chatbot (demo + optional live AI)
+requirements.txt        → Python dependencies
+tempCodeRunnerFile.py   → Local test file (not required for app)
+
+app.py — Main Application (UI + Logic)
+Concept
+
+app.py is the brain of the application.
+It controls:
+• Navigation
+• File upload
+• Page switching
+• Interaction between cleaning, insights, and chatbot
+
+1️ > Page Configuration:
+st.set_page_config(page_title="AI Data Analyst Assistant", layout="wide")
+
