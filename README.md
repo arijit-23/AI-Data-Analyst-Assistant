@@ -21,9 +21,12 @@ An end-to-end, AI-powered web application that transforms raw, messy data into a
 
 The project is designed with a modular structure to ensure scalability:
 
-> **User Interface** (`app.py`)  
-> └── **Processing Engine** (`utils.py`) — *Cleaning, Stat detection, Chart aggregation* > └── **Intelligence Layer** (`chatbot.py`) — *LLM integration & Offline Demo logic*
-
+> **User** > └── **Streamlit UI** (`app.py`)
+>     ├── **Data Cleaning Logic** (`utils.py`)
+>     ├── **Insights & Charts** (`utils.py`)
+>     └── **Chatbot** (`chatbot.py`)
+>         ├── Demo Mode (Offline)
+>         └── Live AI (Optional)
 ### File Breakdown:
 | File | Responsibility |
 | :--- | :--- |
